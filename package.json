@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.34.0"
+  },
+  "name": "parcelJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "start": "parcel src/pages/*.html",
+    "build": "parcel build src/pages/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedlahrizi/js-parcel-bundler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedlahrizi/js-parcel-bundler/issues"
+  },
+  "homepage": "https://github.com/ahmedlahrizi/js-parcel-bundler#readme",
+  "description": ""
+}
