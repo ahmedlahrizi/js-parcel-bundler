@@ -1,0 +1,18 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "makeVisible", ()=>makeVisible
+);
+parcelHelpers.export(exports, "makeInvisible", ()=>makeInvisible
+);
+parcelHelpers.export(exports, "isVisible", ()=>isVisible
+);
+"use strict";
+function makeVisible(item) {
+    item.style.display = 'block';
+}
+function makeInvisible(item) {
+    item.style.display = 'none';
+}
+function isVisible(item) {
+    return item.style.display === 'block';
+}

@@ -1,0 +1,10 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+"use strict";
+function checkNums(firstValue, secondValue) {
+    return [
+        !isNaN(parseFloat(firstValue)),
+        !isNaN(parseFloat(secondValue))
+    ];
+}
+exports.default = checkNums;

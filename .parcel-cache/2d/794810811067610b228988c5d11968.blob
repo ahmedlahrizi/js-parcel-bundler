@@ -1,0 +1,33 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _checkNums = require("./utils/checkNums");
+var _checkNumsDefault = parcelHelpers.interopDefault(_checkNums);
+var _displayError = require("./utils/displayError");
+var _displayErrorDefault = parcelHelpers.interopDefault(_displayError);
+var _displayResult = require("./utils/displayResult");
+var _displayResultDefault = parcelHelpers.interopDefault(_displayResult);
+var _getElements = require("./utils/getElements");
+var _visibilities = require("./utils/visibilities");
+'use strict';
+function handleSubmit() {
+    console.log(`first input value ${JSON.stringify(_getElements.firstNum.value)}` + `& second ${JSON.stringify(_getElements.secondNum.value)}`);
+    //    Input log
+    let [firstValueNum, secondValueNum] = [
+        _getElements.firstNum.value,
+        _getElements.secondNum.value
+    ];
+    let valuesCorrect = _checkNumsDefault.default(firstValueNum, secondValueNum).every((item)=>item
+    );
+    console.log(`Values are${valuesCorrect ? '' : ' NOT'} correct`);
+    if (!valuesCorrect) {
+        // This weird every item is basically checking if all the items are true
+        if (_visibilities.isVisible(_getElements.resultBox)) _visibilities.makeInvisible(_getElements.resultBox);
+        _displayErrorDefault.default(_getElements.problemBox);
+    //    Displays an error because the values are not correct
+    } else /* There is no error */ {
+        //    Erase error block because there is no error
+        _visibilities.makeInvisible(_getElements.problemBox);
+        _displayResultDefault.default(_getElements.resultBox, firstValueNum, secondValueNum);
+    }
+}
+exports.default = handleSubmit;
