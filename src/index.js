@@ -3,8 +3,8 @@
 import { submitButton } from "./utils/getElements";
 import handleSubmit from "./app";
 
-window.addEventListener('load', () => submitButton().addEventListener('click', handleSubmit));
+window.addEventListener('load', () => submitButton.addEventListener('click', handleSubmit));
 
-console.log('hey');
-
-// module.hot?.accept();
+if (module.hot) {
+    module.hot.accept();
+}
