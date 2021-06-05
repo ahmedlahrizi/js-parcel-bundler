@@ -6,7 +6,9 @@ import displayResult from './utils/displayResult';
 import * as domElements from './utils/getElements';
 import {isVisible, makeInvisible} from "./utils/visibilities";
 
-export default function handleSubmit() {
+export default function handleSubmit(event) {
+    event.preventDefault();
+
     console.log(`first input value ${JSON.stringify(domElements.firstNum.value)}` +
      `& second ${JSON.stringify(domElements.secondNum.value)}`);
     //    Input log

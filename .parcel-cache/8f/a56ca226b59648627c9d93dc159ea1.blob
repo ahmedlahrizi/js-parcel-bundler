@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fe3846fb252e5f4a61c37dcfa7b16c95">
+    <title>WebPack</title>
+</head>
+<header> <a class="welcome">Welcome !!</a> </header>
+<body>
+<form class="number-input">
+    <input placeholder="first number" rel="js-first-number" required="" type="text">
+<!--    <p class="math-operator">+</p>-->
+    <select class="math-operator">
+        <option value="add">+</option>
+        <option value="multiply">x</option>
+        <option value="divide">÷</option>
+        <option value="subtract">-</option>
+        <option value="power">**</option>
+    </select>
+    <input placeholder="second number" rel="js-second-number" required="" type="text">
+    <input rel="js-submit-button" type="submit" value="Calc">
+</form>
+<div class="error" hidden="" rel="js-problem-box">Error: Values are not correct, please check them</div>
+<div class="result" hidden="" rel="js-result-box"></div>
+<img alt="Webpack logo" class="webpack-image" src="8ef996b3d0a091057cb4ec6f4b510f4f">
+
+<script src="73ce55fb210c257e4decbef2c4213adb" defer=""></script>
+</body>
+</html>

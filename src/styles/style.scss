@@ -1,5 +1,6 @@
-@use "./colors.scss";
-@use "./minireset.scss";
+@use "./colors";
+@use "./flat-colors";
+@use "./minireset";
 
 header {
     width: 100%;
@@ -8,14 +9,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-body {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
 }
 
 .welcome {
@@ -30,45 +23,57 @@ body {
     letter-spacing: .2ch;
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
 .number-input {
     width: 70%;
     display: grid;
     align-self: center;
-    grid-template-columns: 1fr auto 1fr 1.5fr;
+    grid-template-columns: 1fr auto 1fr 1.35fr;
     align-items: center;
     gap: 1.5em;
 }
 
-input, .math-operator, button[type="submit"] {
+form > * {
     border: 1px solid colors.$light-grey;
     border-radius: 2em;
     padding: .8em;
     box-shadow: 0 .35em .85em .1em rgba(0, 0, 0, 0.24);
     font-size: 1.5rem;
+    min-width: 0; // Fixes a bug
 
     &:focus {
         outline: none;
-        box-shadow: 0 .35em .85em .1em rgba(0, 0, 0, 0.24),
-        0 0 5em 0 colors.$light-blue;
+        box-shadow: 0 .35em .85em .1em rgba(0, 0, 0, 0.24), // Changes opacity
+                    0 0 5em 0 colors.$light-blue;
         opacity: .8;
     }
 }
 
-button[type="submit"] {
+[type="submit"] {
     background-color: colors.$darker-blue;
     color: colors.$light-grey;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .math-operator {
-    /*line-height: 0;*/
-    height: 100%;
     font-weight: bold;
     border-radius: 1em;
     background-color: colors.$light-blue;
+    appearance: auto;
 }
 
-.webpack-image {
-    width: 100%;
+.parcel-image {
+    width: 80%;
 }
 
 @mixin message-div($color) {

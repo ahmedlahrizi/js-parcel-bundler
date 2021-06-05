@@ -1,0 +1,8 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _getElements = require("./utils/getElements");
+var _app = require("./app");
+var _appDefault = parcelHelpers.interopDefault(_app);
+"use strict";
+window.addEventListener('load', ()=>_getElements.submitButton.addEventListener('click', _appDefault.default)
+);
+if (module.hot) module.hot.accept();

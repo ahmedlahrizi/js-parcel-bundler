@@ -1,0 +1,18 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "submitButton", ()=>submitButton
+);
+parcelHelpers.export(exports, "problemBox", ()=>problemBox
+);
+parcelHelpers.export(exports, "firstNum", ()=>firstNum
+);
+parcelHelpers.export(exports, "secondNum", ()=>secondNum
+);
+parcelHelpers.export(exports, "resultBox", ()=>resultBox
+);
+"use strict";
+const submitButton = document.querySelector('[rel="js-submit-button"]');
+const problemBox = document.querySelector('[rel="js-problem-box"]');
+const firstNum = document.querySelector('[rel="js-first-number"]');
+const secondNum = document.querySelector('[rel="js-second-number"]');
+const resultBox = document.querySelector('[rel="js-result-box"]');

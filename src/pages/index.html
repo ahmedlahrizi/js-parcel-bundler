@@ -2,22 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../styles/style.scss">
     <title>WebPack</title>
 </head>
 <header> <a class="welcome">Welcome !!</a> </header>
 <body>
 <form class="number-input">
-    <input placeholder="first number" rel="js-first-number" type="text">
-    <p class="math-operator">+</p>
-    <input placeholder="second number" rel="js-second-number" type="text"> <button rel="js-submit-button" type="submit">Calc</button>
-    <p></p>
+    <input placeholder="first number" rel="js-first-number" required type="text">
+<!--    <p class="math-operator">+</p>-->
+    <select class="math-operator">
+        <option value="add">+</option>
+        <option value="multiply">x</option>
+        <option value="divide">÷</option>
+        <option value="subtract">-</option>
+        <option value="power">**</option>
+    </select>
+    <input placeholder="second number" rel="js-second-number" required type="text">
+    <input rel="js-submit-button" type="submit" value="Calc">
 </form>
 <div class="error" hidden rel="js-problem-box">Error: Values are not correct, please check them</div>
 <div class="result" hidden rel="js-result-box"></div>
-<img alt="Webpack logo" class="webpack-image" src="../assets/images/webpack-logo-horizontal.png">
+<img alt="Webpack logo" class="parcel-image" src="../assets/images/parcel.png">
 
 <script src="./../index.js" defer></script>
 </body>

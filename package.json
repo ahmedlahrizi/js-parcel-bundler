@@ -1,11 +1,10 @@
 {
   "name": "parcelJS",
   "version": "1.0.0",
-  "dependencies": {},
   "main": "src/pages/index.html",
   "scripts": {
-    "start": "parcel serve src/pages/index.html --cache-dir .cache",
-    "build": "parcel build src/pages/index.html --cache-dir .cache"
+    "start": "parcel serve src/pages/index.html",
+    "build": "parcel build src/pages/index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,7 @@
   "homepage": "https://github.com/ahmedlahrizi/js-parcel-bundler#readme",
   "description": "",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
-    "parcel": "^2.0.0-beta.3.1"
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "2.0.0-beta.3.1"
   }
 }
