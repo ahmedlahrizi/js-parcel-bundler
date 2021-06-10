@@ -1,0 +1,7 @@
+@mixin message-div($color: $light-blue) {
+  padding: 1em;
+  font-size: 2rem;
+  background-color: $color;
+  border-radius: 1em;
+  margin: 0 10vw;
+}

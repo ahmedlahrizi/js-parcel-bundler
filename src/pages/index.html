@@ -10,21 +10,16 @@
 <header> <a class="welcome">Welcome !!</a> </header>
 <body>
 <form class="number-input">
-    <input placeholder="first number" rel="js-first-number" required type="text">
-<!--    <p class="math-operator">+</p>-->
+    <div class="error-pop-up" hidden>
+        <button></button>
+        <div class="error" rel="js-problem-box">Error: Values are not correct</div>
+    </div>
+    <input class="first-input" placeholder="first number" rel="js-first-number" type="text">
     <select class="math-operator">
-        <option value="add">+</option>
-        <option value="multiply">x</option>
-        <option value="divide">÷</option>
-        <option value="subtract">-</option>
-        <option value="power">**</option>
-    </select>
-    <input placeholder="second number" rel="js-second-number" required type="text">
+    <input class="second-input" placeholder="second number" rel="js-second-number" type="text">
     <input rel="js-submit-button" type="submit" value="Calc">
 </form>
-<div class="error" hidden rel="js-problem-box">Error: Values are not correct, please check them</div>
 <div class="result" hidden rel="js-result-box"></div>
-<img alt="Webpack logo" class="parcel-image" src="../assets/images/parcel.png">
 
 <script src="./../index.js" defer></script>
 </body>

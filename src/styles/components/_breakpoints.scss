@@ -1,1 +1,9 @@
-$tablet: rem(481px);
+@function toRem($value) {
+  $remValue: $value / 16 + rem;
+  @return $remValue;
+}
+
+$tablet: toRem(481);
+$laptop: toRem(769);
+$desktop: toRem(1025);
+$tv: toRem(1201);
